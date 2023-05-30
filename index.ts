@@ -46,6 +46,12 @@ async function main(): Promise<void> {
     engine.runRenderLoop(() => {
         scene.render()
     })
+
+    // Watch for browser/canvas resize events
+      
+    window.addEventListener("resize", function () {
+        engine.resize();  
+    });
 }
 
 main()
